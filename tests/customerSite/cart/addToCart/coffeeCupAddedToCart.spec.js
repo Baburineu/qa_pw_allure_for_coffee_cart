@@ -18,6 +18,9 @@ testParameters.forEach(({ coffee, price }) => {
     menuPage,
     cartPage,
   }) => {
+    await allure.parentSuite('Customer site');
+    await allure.suite('Cart');
+    await allure.subSuite('Add to cart')
     await allure.epic('Customer site');
     await allure.feature('Cart');
     await allure.story('Add to cart')
